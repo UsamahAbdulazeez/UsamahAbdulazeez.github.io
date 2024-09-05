@@ -23,7 +23,7 @@ markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
 permalink: /:categories/:title/
 timezone: "America/Chicago"
-paginate: false
+paginate: 3
 
 # Author information
 author:
