@@ -11,8 +11,7 @@ svg {
 }
 
 .wave {
-  animation: wave 3s linear;
-  animation-iteration-count:infinite;
+  animation: wave 10s cubic-bezier(.55,.5,.45,.5) infinite;
   fill: #008080;  
 }
 
@@ -21,16 +20,22 @@ svg {
 }
 
 #wave2 {
-  animation-duration:5s;
+  animation-duration: 12s;
   animation-direction: reverse;
-  opacity: .6
+  opacity: .6;
 }
 #wave3 {
-  animation-duration: 7s;
+  animation-duration: 15s;
   opacity:.3;
 }
+
 @keyframes wave {
-  to {transform: translateX(-70%);}
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
 }
 
 </style>
