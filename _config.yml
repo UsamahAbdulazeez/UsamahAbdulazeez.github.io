@@ -1,19 +1,24 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
 # Site settings
-layout: splash
-title: "Welcome to My Portfolio"
-header:
-  image: /assets/images/header-image.svg
-  caption: "An SVG illustration showcasing data analysis."
-  overlay_color: "#333"
-  overlay_filter: "0.5"
-  actions:
-    - label: "View Projects"
-      url: "/projects/"
-      class: "btn--primary"
-email: "usamah.abdulazeez@gmail.com"
-description: "Data scientist showcasing projects and skills."
-url: "https://usamahabdulazeez.github.io"
-baseurl: "" # or "/repository-name"
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Welcome to my Website!
+email: usamah.abdulazeez@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
 github_username: UsamahAbdulazeez
 minimal_mistakes_skin: dark
 search: true
@@ -21,16 +26,42 @@ search: true
 # Build settings
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
+# Outputting
 permalink: /:categories/:title/
-timezone: "America/Chicago"
-paginate: 3
+paginate: 5 # amount of posts to show
+paginate_path: /page:num/
+timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
-# Author information
+include:
+  - _pages
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+
+# Plugins (previously gems:)
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
+
 author:
-  name: "Usamah Abdulazeez"
-  avatar: "/assets/images/chicago_tree.jpg"
-  bio: "Data scientist by degree, problem-solver by nature."
-  email: "usamah.abdulazeez@gmail.com"
+  name   : "Usamah Abdulazeez"
+  avatar : "/assets/images/chicago_tree.jpg"
+  bio    : "Data scientist by degree, problem-solver by nature."
+  email  : "usamah.abdulazeez@gmail.com"
+  Number : "+1-312-838-9884"
   links:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
@@ -39,7 +70,6 @@ author:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/UsamahAbdulazeez"
 
-# Footer links
 footer:
   links:
     - label: "LinkedIn"
@@ -49,18 +79,20 @@ footer:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/UsamahAbdulazeez"
 
-# Defaults for posts and pages
+
 defaults:
+  # _posts
   - scope:
       path: ""
       type: posts
     values:
       layout: single
       author_profile: true
-      read_time: true
-      comments: true
+      read_time: false
+      comments: false
       share: true
       related: true
+  # _pages
   - scope:
       path: "_pages"
       type: pages
@@ -74,3 +106,9 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
+
+if this is my yaml
+
+
+How should i change it so that everything will work. Check the documentationa and guides just to make sure
