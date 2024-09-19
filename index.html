@@ -1,16 +1,145 @@
----
-# You don't need to edit this file, it's empty on purpose.
-# Edit theme's home layout instead if you wanna make some changes
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-layout: home
-author_profile: true
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-<style>
-    .author__avatar {
-        border-radius: 0;
-        width: 150px;
-        height: 150px;
-        object-fit: cover;
-    }
-</style>
+</head>
+    
+<body>
+    <!-- Header with Wavy Background -->
+    <header class="header-wave">
+        <!-- Navigation -->
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="author__avatar">
+                <img src="images/chicago_tree.jpg" alt="Usamah Abdulazeez">
+            </div>
+            <div class="author__content">
+                <h3 class="author__name">Usamah Abdulazeez</h3>
+                <p class="author__bio">Data Scientist & Analyst | MS in Data Science</p>
+            </div>
+            <div class="author__urls-wrapper">
+                <ul class="social-icons">
+                    <li><a href="https://www.linkedin.com/in/uabdulazeez" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://github.com/UsamahAbdulazeez" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a></li>
+                    <li>
+                        <a href="javascript:void(0)" id="email-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </li>                    
+                </ul>
+            </div>
+        </aside>
+        <div class="divider"></div>
+
+
+        <!-- About Me Section -->
+        <section id="about" class="about-me hidden section-box">
+            <h2>About Me</h2>
+            <p>👋 Hi, I'm Usamah Abdulazeez! I'm a data enthusiast who loves finding the plot twist—whether it's in a scatter plot or a movie. I enjoy turning data into clear, compelling stories with all the right details, just like a well-crafted film.</p>
+            <p>With a Master's in Data Science from Illinois Institute of Technology and a background in Industrial Engineering, I bring a unique blend of technical skills and business acumen to the world of data analytics.</p>
+            <p>🌱 Currently, I'm exploring MLflow, FastAPI, and Docker for deploying machine learning workflows, diving into TinyML for microcontroller applications, and getting hands-on with serverless computing using AWS Lambda and Google Cloud Functions.</p>
+            <p>⚡ Fun Fact: I once came 4th and won a trophy in a table tennis competition even after losing all my games—just because some opponents didn't show up!</p>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills hidden">
+            <h2>Tech Stack</h2>
+            <div class="skill-category section-box">
+                <h3>Programming Languages</h3>
+                <div class="skill-list">
+                    <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python" class="hidden">
+                    <img src="https://img.shields.io/badge/SQL-4479A1.svg?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQL" class="hidden">
+                    <img src="https://img.shields.io/badge/r-%23276DC3.svg?style=for-the-badge&logo=r&logoColor=white" alt="R" class="hidden">
+                    <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java" class="hidden">
+                    <img src="https://img.shields.io/badge/javascript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" class="hidden">
+                    <img src="https://img.shields.io/badge/html-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="HTML" class="hidden">
+                    <img src="https://img.shields.io/badge/Cypher-%230072C6.svg?style=for-the-badge&logo=neo4j&logoColor=white" alt="Cypher" class="hidden">
+                </div>
+            </div>
+            <div class="skill-category section-box">
+                <h3>AI & Machine Learning</h3>
+                <div class="skill-list">
+                    <img src="https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="scikit-learn" class="hidden">
+                    <img src="https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white" alt="PyTorch" class="hidden">
+                    <img src="https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white" alt="TensorFlow" class="hidden">
+                    <img src="https://img.shields.io/badge/Keras-%23D00000.svg?style=for-the-badge&logo=Keras&logoColor=white" alt="Keras" class="hidden">
+                    <img src="https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black" alt="Matplotlib" class="hidden">
+                    <img src="https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy" class="hidden">
+                    <img src="https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas" class="hidden">
+                    <img src="https://img.shields.io/badge/SciPy-%230C55A5.svg?style=for-the-badge&logo=scipy&logoColor=%white" alt="SciPy" class="hidden">
+                </div>
+            </div>
+            <div class="skill-category section-box">
+                <h3>Data Engineering & Big Data</h3>
+                <div class="skill-list">
+                    <img src="https://img.shields.io/badge/Snowflake-%2300E5FF.svg?style=for-the-badge&logo=snowflake&logoColor=white" alt="Snowflake" class="hidden">
+                    <img src="https://img.shields.io/badge/Databricks-%23FF3621.svg?style=for-the-badge&logo=databricks&logoColor=white" alt="Databricks" class="hidden">
+                    <img src="https://img.shields.io/badge/Apache%20Spark-FDEE21?style=for-the-badge&logo=apachespark&logoColor=black" alt="Apache Spark" class="hidden">
+                    <img src="https://img.shields.io/badge/Apache%20Hadoop-66CCFF?style=for-the-badge&logo=apachehadoop&logoColor=black" alt="Apache Hadoop" class="hidden">
+                    <img src="https://img.shields.io/badge/Apache%20Hive-FDEE21?style=for-the-badge&logo=apachehive&logoColor=black" alt="Apache Hive" class="hidden">
+                    <img src="https://img.shields.io/badge/Apache%20Kafka-000?style=for-the-badge&logo=apachekafka" alt="Apache Kafka" class="hidden">
+                    <img src="https://img.shields.io/badge/Apache%20Airflow-017CEE?style=for-the-badge&logo=Apache%20Airflow&logoColor=white" alt="Apache Airflow" class="hidden">
+                    <img src="https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" class="hidden">
+                    <img src="https://img.shields.io/badge/Neo4j-008CC1?style=for-the-badge&logo=neo4j&logoColor=white" alt="Neo4J" class="hidden">
+                    <img src="https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite" class="hidden">
+                    <img src="https://img.shields.io/badge/MongoDB-%2347A248.svg?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" class="hidden">
+                    <img src="https://img.shields.io/badge/BigQuery-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white" alt="BigQuery" class="hidden">
+                    <img src="https://img.shields.io/badge/PIG-66CCFF.svg?style=for-the-badge&logo=apache&logoColor=white" alt="PIG" class="hidden">
+                </div>
+            </div>
+            <div class="skill-category section-box">
+                <h3>Technology & Operations</h3>
+                <div class="skill-list">
+                    <img src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS" class="hidden">
+                    <img src="https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white" alt="Azure" class="hidden">
+                    <img src="https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white" alt="Google Cloud" class="hidden">
+                    <img src="https://img.shields.io/badge/Render-%46E3B7.svg?style=for-the-badge&logo=render&logoColor=white" alt="Render" class="hidden">
+                    <img src="https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white" alt="Flask" class="hidden">
+                    <img src="https://img.shields.io/badge/power_bi-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" alt="Power BI" class="hidden">
+                    <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" class="hidden">
+                    <img src="https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white" alt="Kubernetes" class="hidden">
+                    <img src="https://img.shields.io/badge/tableau-%2307455F.svg?style=for-the-badge&logo=tableau&logoColor=white" alt="Tableau" class="hidden">
+                    <img src="https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white" alt="Excel" class="hidden">
+                    <img src="https://img.shields.io/badge/VirtualBox-183A61?style=for-the-badge&logo=virtualbox&logoColor=white" alt="VirtualBox" class="hidden">
+                    <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux" class="hidden">
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Sections (e.g., Projects, Contact) -->
+        <!-- Include other sections as needed -->
+    </main>
+
+    <footer>
+        <div class="wave-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+                <path fill="#00b0b0" fill-opacity="1" d="M0,224L60,208C120,192,240,160,360,138.7C480,117,600,107,720,122.7C840,139,960,181,1080,197.3C1200,213,1320,203,1380,197.3L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+            </svg>
+        </div>        
+        <p>© 2024 Usamah Abdulazeez. All rights reserved.</p>
+    </footer>
+    
+    <!-- JavaScript for Scroll Animations -->
+    <script src="js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project README</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <header class="header-wave">
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section id="readme-section">
+            <h1>Project README</h1>
+            <div id="readme-content">Loading...</div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wave-container">
+            <!-- Updated SVG for a new look -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+                <path fill="#00b0b0" fill-opacity="1" d="M0,192L40,176C80,160,160,128,240,122.7C320,117,400,139,480,154.7C560,171,640,181,720,192C800,203,880,213,960,208C1040,203,1120,181,1200,160C1280,139,1360,117,1400,106.7L1440,96V320H0Z"></path>
+            </svg>
+        </div>
+        <p>© 2024 Usamah Abdulazeez. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const params = new URLSearchParams(window.location.search);
+            const project = params.get('project');  // Get the project name from query parameter
+    
+            if (!project) {
+                document.getElementById('readme-content').textContent = 'Project README not found.';
+                return;
+            }
+    
+            // Assuming your README files are in the projects folder, like: projects/project-name/project-readme.md
+            const readmePath = `projects/${project}/${project}.md`;
+    
+            fetch(readmePath)  // Fetch the local markdown file
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('404: README Not Found');
+                    }
+                    return response.text();
+                })
+                .then(markdown => {
+                    const html = marked.parse(markdown);  // Convert markdown to HTML using marked.js
+                    document.getElementById('readme-content').innerHTML = html;
+                })
+                .catch(error => {
+                    console.error('Error fetching README:', error);
+                    document.getElementById('readme-content').textContent = error.message;
+                });
+        });
+    </script>
+    
+    
+</body>
+</html>

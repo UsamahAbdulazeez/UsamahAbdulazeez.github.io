@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+</head>
+    
+<body>
+    <header class="header-wave">
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <main class="main-content">
+        <section class="projects-section">
+            <h1>My Projects</h1>
+            
+            <article id="lichess-analyzer" class="project-detail">
+                <h2>Lichess Position Analyzer</h2>
+                <p>A Chrome extension that enhances your chess experience on Lichess by allowing you to extract and analyze positions directly from the analysis board.</p>
+                <ul>
+                    <li>Extracts FEN & PGN from Lichess analysis board</li>
+                    <li>Provides tactical, positional, material, and strategic analyses</li>
+                    <li>Uses server-side engine, LLMs, and Stockfish online</li>
+                    <li>Technologies: JavaScript, HTML, CSS, Python, Flask, OpenAI API</li>
+                </ul>
+                <a href="#" class="readme-button" data-project="lichessPositionAnalyzer">View README</a>
+            </article>
+            
+            
+            <article id="nba-query-playground" class="project-detail">
+                <h2>NBA Data Query Playground</h2>
+                <p>A web app for practicing SQL with NBA data, featuring natural language to SQL conversion.</p>
+                <ul>
+                    <li>Fetches and stores NBA data from balldontlie API</li>
+                    <li>Provides SQL query interface and syntax examples</li>
+                    <li>Converts natural language to SQL using OpenAI</li>
+                    <li>Technologies: Python, Flask, SQLite, Pandas, OpenAI API</li>
+                </ul>
+                <a href="#" class="readme-button" data-project="nbaQueryPlayground">View README</a>
+            </article>
+
+            <article id="tag-prediction" class="project-detail">
+                <h2>Multi-label Tag Prediction</h2>
+                <p>Led a project employing PITF and MLC techniques to achieve ~80% precision & recall in tag prediction.</p>
+                <ul>
+                    <li>Implemented Pairwise Interaction Tensor Factorization (PITF)</li>
+                    <li>Used Multi-Label Classification (MLC) techniques</li>
+                    <li>Achieved high accuracy in predicting tags for various items</li>
+                    <li>Technologies: Python, Machine Learning libraries</li>
+                </ul>
+                <a href="#" class="readme-button" data-project="https://raw.githubusercontent.com/YourRepo/tag-prediction/main/README.md">View README</a>
+            </article>
+
+            <article id="bird-audio-classification" class="project-detail">
+                <h2>Bird Audio Classification</h2>
+                <p>Collaborated on a project using Convolutional Neural Networks (CNNs) for bird audio classification.</p>
+                <ul>
+                    <li>Focused on data preprocessing and augmentation</li>
+                    <li>Implemented CNNs for audio analysis</li>
+                    <li>Technologies: Python, TensorFlow/PyTorch, Audio processing libraries</li>
+                </ul>
+                <a href="#" class="readme-button" data-project="https://raw.githubusercontent.com/YourRepo/bird-audio-classification/main/README.md">View README</a>
+            </article>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="wave-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+                <path fill="#00b0b0" fill-opacity="1" d="M0,160L60,138.7C120,117,240,75,360,69.3C480,64,600,96,720,144C840,192,960,256,1080,272C1200,288,1320,256,1380,240L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+            </svg>
+        </div>
+        <p>© 2024 Usamah Abdulazeez. All rights reserved.</p>
+    </footer>
+    
+    
+    <script src="js/projects.js"></script>
+</body>
+</html>
