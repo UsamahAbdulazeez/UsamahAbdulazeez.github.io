@@ -13,27 +13,27 @@ A web app for practicing SQL with NBA data. Fetches data from the balldontlie AP
 
 ### Data Tables
 
-![Data Tables](images/tables.png)
+![Data Tables](projects/nbaQueryPlayground/images/tables.png)
 *Displays data retrieved from the balldontlie API, including tables for players, teams, games, and stats.*
 
 ### SQL Syntax Examples Dropdown
 
-![SQL Syntax Examples Dropdown](images/dropdown.png)
+![SQL Syntax Examples Dropdown](projects/nbaQueryPlayground/images/dropdown.png)
 *The dropdown menu allows users to select from various SQL syntax examples to help them learn and construct queries.*
 
 ### Query Execution
 
-![Query Execution](images/execution.png)
+![Query Execution](projects/nbaQueryPlayground/images/execution.png)
 *Users can type their SQL queries in the input box and see the results displayed below after clicking "Execute".*
 
 ### LLM Help - Natural Language to SQL
 
-![LLM Help - Natural Language to SQL](images/llm_Help.png)
+![LLM Help - Natural Language to SQL](projects/nbaQueryPlayground/images/llm_Help.png)
 *Users can input natural language queries, and the app will suggest corresponding SQL queries using OpenAI.*
 
 ### LLM Explanation of SQL Queries
 
-![LLM Explanation of SQL Queries](images/llm_help2.png)
+![LLM Explanation of SQL Queries](projects/nbaQueryPlayground/images/llm_help2.png)
 *The app can also explain SQL queries in natural language, helping users understand what each query does.*
 
 ## Setup and Installation
