@@ -53,15 +53,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // Define notification globally so it can be reused
     const notification = document.createElement('div');
     notification.className = 'copy-notification';
-    document.body.appendChild(notification);
-    notification.style.display = 'none';
+    document.body.appendChild(notification); // Add the notification to the body
 
     // Reusable function to show notifications
     function showNotification(message) {
+        console.log('Notification triggered: ', message);  // Debug log
         notification.textContent = message;
-        notification.style.display = 'block';
+        notification.classList.add('show');  // Add the 'show' class to make it visible
+
         setTimeout(() => {
-            notification.style.display = 'none';
+            notification.classList.remove('show');  // Remove the 'show' class to hide it
         }, 3000); // Display for 3 seconds
     }
 
@@ -69,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const emailItem = document.querySelector('.contact-item.email');
     if (emailItem) {
         console.log("Contact email item found");
-        
+
         emailItem.addEventListener('click', () => {
             console.log("Contact email clicked");
             const email = 'usamah.abdulazeez@gmail.com';
@@ -86,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const linkedInBox = document.querySelector('.contact-item.linkedin');
     if (linkedInBox) {
         console.log("LinkedIn box found");
-        
+
         linkedInBox.addEventListener('click', () => {
             window.open('https://www.linkedin.com/in/uabdulazeez', '_blank');
         });
@@ -96,11 +97,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const emailLink = document.querySelector('#email-link');
     if (emailLink) {
         console.log("Sidebar email link found");
-        
+
         emailLink.addEventListener('click', (event) => {
             event.preventDefault(); // Prevent any default action
             console.log("Sidebar email clicked");
-            
+
             navigator.clipboard.writeText('usamah.abdulazeez@gmail.com').then(() => {
                 console.log("Email copied to clipboard from sidebar");
                 showNotification('Email copied to clipboard!');
@@ -119,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const formData = new FormData(form);
             const action = form.getAttribute('action');
-            
+
             fetch(action, {
                 method: 'POST',
                 body: formData,

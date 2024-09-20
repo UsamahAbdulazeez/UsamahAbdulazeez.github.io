@@ -5,7 +5,7 @@
     /* Colors */
     --color-text: #d3dadb;        /* Light teal-blue for body text */
     --color-background: #1E2122;  /* Dark gray background */
-    --color-wave: #049a9a;        /* Soft teal blue for wave and accent */
+    --color-wave: #089595;        /* Soft teal blue for wave and accent */
     --color-accent: #8FC9D1;      /* Light teal-blue for interactive elements */
     --color-nav-bg: #181A1B;      /* Darker background for the nav bar */
     --color-heading: #99E7E6;     /* Brighter teal-blue for headings */
@@ -500,7 +500,7 @@ footer p {
 
 /* Entire box clickable for email and LinkedIn */
 .contact-item {
-    background-color: #3e9a9a; /* Brighter and more vibrant teal */
+    background-color: #0B6262; /* Brighter and more vibrant teal */
     padding: 2rem;
     border-radius: 8px;
     text-align: center;
@@ -514,7 +514,7 @@ footer p {
 
 .contact-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 25px rgba(0, 240, 240, 0.4);
+    box-shadow: 0 0 10px rgba(0, 240, 240, 0.4);
 }
 
 .contact-item i {
@@ -767,4 +767,27 @@ footer {
     }
 }
 
+
+.copy-notification {
+    position: fixed;
+    top: 35%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Ensure full centering */
+    background-color: var(--color-wave); /* Use your accent color */
+    color: var(--color-text); /* Use the text color */
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none; /* Hidden by default */
+    opacity: 0; /* Initially transparent */
+    text-align: center; /* Center the text */
+    transition: opacity 0.3s ease-in-out; /* Smooth fade-in/out */
+}
+
+
+.copy-notification.show {
+    display: block;
+    opacity: 1; /* Make it visible with smooth transition */
+}
 
