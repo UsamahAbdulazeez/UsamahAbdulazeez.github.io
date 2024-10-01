@@ -5,8 +5,8 @@
     /* Colors */
     --color-text: #d3dadb;        /* Light teal-blue for body text */
     --color-background: #1E2122;  /* Dark gray background */
-    --color-wave: #089595;        /* Soft teal blue for wave and accent */
-    --color-accent: #8FC9D1;      /* Light teal-blue for interactive elements */
+    --color-wave: #00b0b0;        /* Soft teal blue for wave and accent */
+    --color-accent: #95d8e1;      /* Light teal-blue for interactive elements */
     --color-nav-bg: #181A1B;      /* Darker background for the nav bar */
     --color-heading: #99E7E6;     /* Brighter teal-blue for headings */
     --color-box: #292B2C;         /* Medium gray for containers */
@@ -559,6 +559,7 @@ footer p {
     font-size: 1rem;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
     margin-top: 1.5rem; /* Adds space between the content and the button */
 }
 
