@@ -6,7 +6,6 @@ Due to processing power constraints, the AI was trained on a subset of 100,000 g
 
 <a href="https://beat-usamahs-bot.netlify.app/" target="_blank" style="color: #42f59e; font-size: 24px; font-weight: bold; text-decoration: underline;">🎮 Play the Chess AI Game Now!</a>
 
-
 <h2 style="color: #00e6e6;">Table of Contents</h2>
 <ul>
     <li><a href="#project-overview" style="color: #00e6e6;">Project Overview</a></li>
@@ -26,7 +25,6 @@ Due to processing power constraints, the AI was trained on a subset of 100,000 g
     <li><a href="#future-improvements" style="color: #00e6e6;">Future Improvements</a></li>
     <li><a href="#license" style="color: #00e6e6;">License</a></li>
 </ul>
-
 
 ## Project Overview
 
@@ -50,6 +48,7 @@ The dataset used for training the AI model consists of over 2.5 million chess ga
 ### Backend (Chess Engine)
 
 The backend is built using Python and Flask, serving as an API for the AI chess engine. It consists of:
+
 - **Flask API**: Handles incoming requests for move predictions. It takes a FEN (Forsyth-Edwards Notation) string as input and returns the best move based on the model's output.
 - **PyTorch Model**: The neural network trained on chess games to predict the next best move based on the current board state.
 - **Move Encoding**: Moves are encoded as integers and decoded from integers back to UCI format using the `move_to_int.pkl` mapping file.
@@ -57,6 +56,7 @@ The backend is built using Python and Flask, serving as an API for the AI chess 
 ### Frontend (Chess UI)
 
 The frontend is designed for player interaction:
+
 - **HTML/JavaScript/CSS**: The chessboard is rendered with `chessboard.js`, and game logic is handled by `chess.js`. Custom JavaScript handles user interactions, drag-and-drop moves, and communication with the backend API.
 - **Responsive Design**: Ensures that the game works across devices, from mobile to desktop.
 
@@ -65,6 +65,7 @@ The frontend is designed for player interaction:
 ### Running Locally with Docker
 
 #### Prerequisites
+
 - Ensure you have [Docker](https://www.docker.com/get-started) installed on your machine.
 
 #### Running the Backend
@@ -72,11 +73,13 @@ The frontend is designed for player interaction:
 The backend is containerized with Docker. To run the backend locally, follow these steps:
 
 1. **Build the Docker Image**:
+
    ```bash
    docker build -t chess-engine .
    ```
 
 2. **Run the Docker Container**:
+
    ```bash
    docker run -p 5000:5000 chess-engine
    ```
@@ -122,11 +125,11 @@ Steps to Deploy on Cloud Run:
 
 ## Usage
 
-### Playing the Game:
+### Playing the Game
 
 Open the frontend (`index.html`) in your browser. You can start playing immediately, making moves on the chessboard. The AI will respond with its predicted move in real-time.
 
-### Backend Interaction:
+### Backend Interaction
 
 The frontend sends requests to the backend API, whether running locally in Docker or deployed on Google Cloud Run, which processes the request and returns the AI's move.
 
